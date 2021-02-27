@@ -15,7 +15,7 @@ import (
 var violationCounters = map[vimprovements.ViolationType]uint32{}
 
 func main() {
-  fmt.Printf("Starting vimprover.");
+  fmt.Printf("Starting vimprover.\n");
   state := keyboard.NewKeyboardState()
   err := listener.RunListener(func(ke listener.KeyEvent) {
     state = state.AddEvent(ke)
@@ -25,7 +25,7 @@ func main() {
     for _, v := range vimprovements.EnabledVimprovements {
       violation, err := v(state)
       if err != nil {
-        fmt.Printf("Vimprover encountered error %+v.", err);
+        fmt.Printf("Vimprover encountered error:\n%+v\n", err);
         continue
       }
       if violation != nil {
@@ -39,9 +39,9 @@ func main() {
     throttledPrintViolationStats()
   })
   if err != nil {
-    fmt.Printf("Vimprover terminated with error %+v.", err);
+    fmt.Printf("Vimprover terminated with error:\n%+v\n", err);
   } else {
-    fmt.Printf("Vimprover terminated.");
+    fmt.Printf("Vimprover terminated.\n");
   }
 }
 
