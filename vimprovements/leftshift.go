@@ -8,7 +8,7 @@ import (
 
 var lsViolation = Violation{
   Type: LeftShiftViolation,
-  message: "Left shift was used with button on left side of the keyboard",
+  Message: "Left shift was used with button on left side of the keyboard",
 }
 
 // leftShift vimprovement detects if the left shift key is used in combination

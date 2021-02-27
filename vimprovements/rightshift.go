@@ -8,7 +8,7 @@ import (
 
 var rsViolation = Violation{
   Type: RightShiftViolation,
-  message: "Right shift was used with button on right side of the keyboard",
+  Message: "Right shift was used with button on right side of the keyboard",
 }
 
 // rightShift vimprovement detects if the right shift key is used in combination

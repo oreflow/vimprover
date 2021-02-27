@@ -8,7 +8,7 @@ import (
 
 var rkViolation = Violation{
   Type: RepeatedKeypressViolation,
-  message: "Repetition of keys H, J, K, L was detected",
+  Message: "Repetition of keys H, J, K, L was detected",
 }
 
 // Limit for how many repeated presses are considered a violation.

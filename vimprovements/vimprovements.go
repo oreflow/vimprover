@@ -6,18 +6,18 @@ import (
 )
 
 // ViolationType provides an unique identifier for each Vimprovement type.
-type ViolationType int
+type ViolationType string
 
 const (
-    LeftShiftViolation ViolationType = iota
-    RightShiftViolation
-    RepeatedKeypressViolation
+    LeftShiftViolation ViolationType = "LeftShiftViolation "
+    RightShiftViolation ViolationType = "RightShiftViolation "
+    RepeatedKeypressViolation ViolationType = "RepeatedKeypressViolation "
 )
 
 // Violation is used to represent an area to vimprove in.
 type Violation struct {
   Type ViolationType
-  message string
+  Message string
 }
 
 // Vimprovement defines the interface of a vimprovement implementation.
